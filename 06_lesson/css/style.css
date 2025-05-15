@@ -1,0 +1,38 @@
+body {
+    padding: 10%;
+    font-size: 2rem;
+    color: purple;
+    font-family: sans-serif;
+}
+
+p {
+    text-decoration: underline;
+    text-decoration: overline;
+    text-decoration: line-through;
+    text-decoration: none;
+
+    text-transform: capitalize;
+    text-transform: uppercase;
+    text-transform: lowercase;
+    
+    text-align: center;
+    text-align: right;
+    text-align: justify;
+    text-align: left;
+
+    text-indent: 2em;
+
+    line-height: 1.5;
+
+    letter-spacing: 0.1em;
+
+    /* word-spacing: 0.1em; */
+
+    /* font-weight: 600; */
+
+    font-style:italic;
+}
+
+input,button {
+    font: inherit;
+}
