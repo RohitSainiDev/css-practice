@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Lobster&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  min-height: 200vh;
+}
+
+/* 
+.outer-container {
+  border: 3px dashed #000;
+  width: 75vw;
+  height: 85vh;
+  margin: 40px auto;
+}
+
+.inner-container {
+  border: 2px solid #00f;
+  width: 40vw;
+  height: 50vh;
+  margin: 200px auto;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  color: #fff;
+  padding: 1rem;
+}
+
+.absolute {
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.relative {
+  background-color: green;
+  position: relative;
+  top: 500px;
+  z-index: 1;
+}
+
+.fixed {
+  background-color: blue;
+  position: fixed;
+  top: 5rem;
+}
+
+.sticky {
+  background-color: black;
+  position: sticky;
+  top: 0;
+
+}
+
+.general {
+  background-color: aquamarine;
+} */
+
+
+.social {
+  font-size: inherit;
+  padding: 1rem;
+  background-color: darkturquoise;
+  position: fixed;
+  top: 30%;
+  z-index: 1;
+}
+
+section {
+  height: 100vh;
+}
+
+.header {
+  text-align: center;
+  padding: 1rem;
+  color: aliceblue;
+  font-size: 5rem;
+  position: sticky;
+  top: 0;
+}
+
+.blue {
+  background-color: blue;
+
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+footer {
+  background-color: black;
+  font-size: 3rem;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  color: #fff;
+}
+
+a:link,
+a:visited {
+  color: #fff;
+}
