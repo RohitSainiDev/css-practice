@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/* || RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* || GENERAL STYLES */
+body {
+  font: 1rem "Nunito", sans-serif;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: .5fr 4fr .5fr;
+  grid-template-areas: "hd" "mn" "ft";
+  text-align: center;
+}
+
+header,
+footer {
+  background-color: burlywood;
+  position: sticky;
+  align-content: center;
+}
+
+header {
+  top: 0;
+  border-bottom: 2px solid #000;
+  grid-area: hd;
+}
+
+
+main {
+  background-image: radial-gradient(beige, burlywood);
+  grid-area: mn;
+  align-content: center;
+}
+
+footer {
+  border-top: 2px solid #000;
+  grid-area: ft;
+  bottom: 0;
+}
+
+@media (min-width:0) and (max-width:375px) {
+  main {
+    background-image: radial-gradient(beige, rgb(135, 222, 151));
+  }
+}
+
+@media (min-width:375px) and (max-width:768px) {
+  main {
+    background-image: radial-gradient(beige, rgb(166, 135, 222));
+  }
+}
+
+@media (min-width:768px) and (max-width:1200px) {
+  main {
+    background-image: radial-gradient(beige, rgb(222, 135, 197));
+  }
+}
