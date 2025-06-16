@@ -19,8 +19,12 @@ img {
 }
 
 /* || GENERAL STYLES */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font: 1rem "Nunito", sans-serif;
+  font: 1.5rem "Nunito", sans-serif;
   min-height: 100vh;
   background-color: #475569;
   background-image: radial-gradient(whitesmoke, #475569);
@@ -81,6 +85,11 @@ main {
   padding: 1rem;
 }
 
+.card figure {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
 .card img {
   border: 5px double #333;
   border-radius: 50%;
@@ -94,4 +103,88 @@ main {
 
 footer {
   bottom: 0;
+}
+
+/* || SMALL */
+@media screen and (min-width:576px) {
+  main {
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .card {
+    width: min(100%, 400px);
+  }
+
+  .card:last-child {
+    order: -1;
+  }
+}
+
+/* || MEDIUM */
+@media screen and (min-width:768px) {
+  nav {
+    display: none;
+  }
+
+  .card {
+    width: min(100%, 325px);
+  }
+
+  .card figure {
+    flex-flow: column-reverse;
+  }
+
+  .card p {
+    margin-top: 1rem;
+  }
+}
+
+/* || LARGE */
+@media screen and (min-width:992px) {
+  .card {
+    width: min(100%, 400px);
+  }
+
+  .card:nth-child(2) {
+    order: -1;
+  }
+}
+
+/* || XL */
+@media screen and (min-width:1200px) {
+  .card {
+    width: min(33%-1rem, 500px);
+  }
+
+  .card:nth-child(2) {
+    order: -1;
+  }
+}
+
+/* || MOBILE DEVICE LANDSCAPE */
+@media screen and (max-height:425px) and (min-aspect-ratio:7/4) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    display: none;
+  }
+
+  main {
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+  }
+
+  .card {
+    width: min(33%-0.25rem, 200px);
+  }
+
+  .card figcaption,
+  .card p {
+    font-size: 1.25rem;
+  }
 }
