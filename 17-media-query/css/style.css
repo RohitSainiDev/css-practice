@@ -11,53 +11,96 @@
 body {
   font: 1rem "Nunito", sans-serif;
   min-height: 100vh;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: .5fr 4fr .5fr;
-  grid-template-areas: "hd" "mn" "ft";
+  background-color: #475569;
+  background-image: radial-gradient(whitesmoke, #475569);
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
 header,
+nav,
+main,
 footer {
-  background-color: burlywood;
+  display: grid;
+  place-content: center;
+  grid-template-columns: 100%;
+}
+
+header,
+footer {
   position: sticky;
-  align-content: center;
+  background-color: #1e293b;
+  color: whitesmoke;
 }
 
 header {
   top: 0;
-  border-bottom: 2px solid #000;
-  grid-area: hd;
 }
 
+nav {
+  background-color: whitesmoke;
+  color: black;
+  border-bottom: 2px solid black;
+}
 
 main {
-  background-image: radial-gradient(beige, burlywood);
-  grid-area: mn;
-  align-content: center;
+  flex-grow: 1;
 }
 
 footer {
-  border-top: 2px solid #000;
-  grid-area: ft;
   bottom: 0;
 }
 
-@media (min-width:0) and (max-width:375px) {
-  main {
-    background-image: radial-gradient(beige, rgb(135, 222, 151));
+/* || SMALL */
+@media screen and (min-width:576px) {
+  body {
+    background-color: chartreuse;
+    background-image: radial-gradient(whitesmoke, chartreuse);
+  }
+
+  nav {
+    display: none;
   }
 }
 
-@media (min-width:375px) and (max-width:768px) {
-  main {
-    background-image: radial-gradient(beige, rgb(166, 135, 222));
+/* || MEDIUM */
+@media screen and (min-width:768px) {
+  body {
+    background-color: coral;
+    background-image: radial-gradient(whitesmoke, coral);
+  }
+
+  /* Not required as already done in previous media-query
+  nav {
+    display: none;
+  } */
+}
+
+/* || LARGE */
+@media screen and (min-width:992px) {
+  body {
+    background-color: blueviolet;
+    background-image: radial-gradient(whitesmoke, blueviolet);
   }
 }
 
-@media (min-width:768px) and (max-width:1200px) {
-  main {
-    background-image: radial-gradient(beige, rgb(222, 135, 197));
+/* || XL */
+@media screen and (min-width:1200px) {
+  body {
+    background-color: darkkhaki;
+    background-image: radial-gradient(whitesmoke, darkkhaki);
+  }
+}
+
+/* || MOBILE DEVICE LANDSCAPE */
+@media screen and (max-height:425px) and (min-aspect-ratio:7/4) {
+  body {
+    background-color: dodgerblue;
+    background-image: radial-gradient(whitesmoke, dodgerblue);
+  }
+
+  nav {
+    display: none;
   }
 }
